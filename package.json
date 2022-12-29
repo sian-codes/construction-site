@@ -23,9 +23,7 @@
     "eject": "react-scripts eject",
     "deploy": "gh-pages -d build"
   },
-
   "homepage": "https://{sian-codes}.github.io/{construction-site}/{src}",
-
   "eslintConfig": {
     "extends": [
       "react-app",
