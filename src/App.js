@@ -9,9 +9,9 @@ function App() {
           <div className="fade-in">
           <h1>Site Under Construction</h1>
           <div className="buttons">
-              <a className="btn-contact" href="mailto:sian@siancodes.com" onClick={() => window.location.href = 'mailto:sian@siancodes.com'}><FontAwesomeIcon icon={thin('envelope')}/> Contact Me</a>
-              <a className="coffee" href="https://siancodes.com"><FontAwesomeIcon icon={thin("cup-togo")} /></a>
-              <a className="btn-link" href="https://github.com/sian-codes">GitHub <FontAwesomeIcon icon={thin("code")}/></a>
+              <a className="btn-contact" href="mailto:sian@siancodes.com" target="_blank"><FontAwesomeIcon icon={thin('envelope')}/> Contact Me</a>
+              <a className="coffee" href="https://siancodes.com" ><FontAwesomeIcon icon={thin("cup-togo")} /></a>
+              <a className="btn-link" href="https://github.com/sian-codes" target="_blank">GitHub <FontAwesomeIcon icon={thin("code")}/></a>
           </div>
     </div>
       </header>
