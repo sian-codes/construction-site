@@ -9,15 +9,16 @@
 }
 
 .logo {
-
+    height: 200px;
+    width: 450px;
 }
 
 .nav-bar {
-    width: 100%;
+    width: 98%;
     height: 100px;
     justify-content: space-between;
-    padding-left: 10px;
-    padding-top: 10px;
     display: inline-flex;
+    padding: 20px 20px 80px;
 }
+
 

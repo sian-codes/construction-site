@@ -1,0 +1,51 @@
+.main-post {
+    width: 90%;
+    height: 16em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+    border-radius: 10px;
+    transition: 1s;
+}
+.main-post:hover {
+    margin: 0 auto 40px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    background-color: rgba(255, 255, 255, 0.39);
+}
+
+.main-post:hover .main-post-img {
+    border-radius: 15px 0 0 15px;
+}
+
+.main-post-img {
+    width: 2500px;
+    border-radius: 15px;
+    margin: 25px;
+    transition: 1s;
+}
+
+.main-post-title {
+    font-family: 'Dosis', sans-serif;
+    font-size: 40px;
+    margin-bottom: 15px;
+    line-height: 2;
+    color: #030303;
+}
+
+.main-post-subtitle {
+    font-size: 20px;
+    margin-bottom: 15px;
+    margin-right: 10px;
+    line-height: 1.5;
+    color: #1d291f;
+    font-family: 'Dosis', sans-serif;
+}
+
+a {
+    text-decoration: none !important;
+    color: black;
+}
+
+
