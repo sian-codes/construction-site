@@ -1,9 +1,9 @@
-import "./home.css";
-import PageHeader from "../components/PageHeader";
-import SubPosts from "../components/blog-posts/SubPosts";
-import MainPost from "../components/blog-posts/MainPost";
+import "./blog.css";
+import PageHeader from "../../components/header/PageHeader";
+import SubPosts from "../../components/blog-posts/SubPosts";
+import MainPost from "../../components/blog-posts/MainPost";
 
-export default function Blog() {
+export default function BlogMainPage() {
     return (
         <div className="blog-page">
             <PageHeader></PageHeader>
