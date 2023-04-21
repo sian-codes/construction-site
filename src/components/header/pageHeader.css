@@ -1,35 +1,33 @@
-.btn-contact {
-    background-color: transparent;
-    left: -50px;
-    color: white;
-    border-radius: 5px;
-    border-color: white;
-    font-family: 'Dosis', sans-serif;
-    text-decoration: none;
-}
-
 .logo {
-    height: 200px;
-    width: 450px;
-}
-
-.logo2 {
-
+    height: 70px;
+    width: 180px;
 }
 
 .nav-bar {
     width: 98%;
-    height: 100px;
+    height: 70px;
     justify-content: space-between;
     display: inline-flex;
-    padding: 20px 20px 80px;
+    padding: 10px 10px 10px;
+    border: thin solid rgba(247, 248, 248, 0.51);
 }
 
-.fade-in {
-    animation: fadeIn ease 50s;
-    -webkit-animation: fadeIn ease 50s;
-    -moz-animation: fadeIn ease 50s;
-    -o-animation: fadeIn ease 50s;
-    -ms-animation: fadeIn ease 50s;
+.btn-contact {
+    margin-top: 20px;
+    color: white;
+    border-radius: 5px;
 }
+
+.icons {
+    margin-top: 10px;
+    justify-content: space-between;
+    display: inline-flex;
+}
+
+/*.fade-in {*/
+/*    animation: fadeIn ease 50s;*/
+/*    -webkit-animation: fadeIn ease 50s;*/
+/*    -moz-animation: fadeIn ease 50s;*/
+/*    -o-animation: fadeIn ease 50s;*/
+/*}*/
 

@@ -5,7 +5,9 @@ import BlogMainPage from "./pages/blog/BlogMainPage";
 import "./App.css";
 import UnderConstruction from "./pages/underConstruction/UnderConstruction";
 import Home from "./pages/home/Home";
-import NewPost from "./pages/blog/NewPost";
+import NewPost from "./models/NewPost";
+import LoginAuth from "./authorisedUser/pages/LoginAuth";
+import Register from "./authorisedUser/pages/Register";
 // import LoginAuth from "./authorisedUser/pages/LoginAuth";
 // import {AuthContext} from "./authorisedUser/components/context/auth-context";
 
@@ -57,7 +59,9 @@ function App() {
                 <Route path="/" element={<UnderConstruction />} />
                 <Route path="/blog" element={<BlogMainPage />} />
                 <Route path="/home" element={<Home />} />
-                <Route path='/new-post' element={<NewPost />} />
+                <Route path='/blog/new-post' element={<NewPost />} />
+                <Route path='/login' element={<LoginAuth />} />
+                <Route path='/register' element={<Register />} />
             </Routes>
         </BrowserRouter>
         // </AuthContext.Provider>

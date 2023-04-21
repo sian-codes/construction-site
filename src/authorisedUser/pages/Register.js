@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, {useContext, useState} from 'react';
 
 import Input from '../../components/form/Input';
 import Card from '../../components/card/Card'
@@ -6,7 +6,19 @@ import {useForm} from "../../hooks/LoginFormHook";
 import {AuthContext} from '../components/context/auth-context';
 import './LoginAuth.css';
 
-const LoginAuth = () => {
+const Register = () => {
+
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+
+    function register(ev) {
+        ev.preventDefault();
+        fetch('http://localhost:4000/blog', {
+            method: 'POST',
+            body: JSON.stringify({username, password})
+        })
+    }
+
     const auth = useContext(AuthContext);
 
     const [formState, inputHandler] = useForm(
@@ -31,16 +43,13 @@ const LoginAuth = () => {
 
     return (
         <Card className="authentication">
-            <h2>Login Required</h2>
+            <h2>Register Here</h2>
             <hr />
             <form onSubmit={authSubmitHandler}>
                 <Input
                     element="input"
-                    id="email"
-                    type="email"
-                    label="E-Mail"
-                    errorText="Please enter a valid email address."
-                    onInput={inputHandler}
+                    id={username}
+                    label="Username"
                 />
                 <Input
                     element="input"
@@ -55,4 +64,4 @@ const LoginAuth = () => {
     );
 };
 
-export default LoginAuth;
+export default Register;

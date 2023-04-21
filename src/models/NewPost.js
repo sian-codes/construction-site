@@ -1,12 +1,12 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-import Input from '../../components/form/Input';
-import Button from '../../components/buttons/Button';
+import Input from '../components/form/Input';
+import Button from '../components/buttons/Button';
 // import {
 //     VALIDATOR_REQUIRE,
 //     VALIDATOR_MINLENGTH
 // } from '../../shared/util/validators';
-import { useForm } from '../../hooks/LoginFormHook';
+import { useForm } from '../hooks/LoginFormHook';
 import './NewPost.css';
 
 const NewPost = () => {
@@ -20,21 +20,19 @@ const NewPost = () => {
                 value: '',
                 isValid: false
             },
-            // image: {
-            //     value: '',
-            //     isValid: false
-            // }
         },
         false
     );
 
-    const placeSubmitHandler = event => {
+    const [selectedFile, setSelectedFile] = useState(null);
+
+    const BlogPostSubmitHandler = event => {
         event.preventDefault();
         console.log(formState.inputs); // send this to the backend!
     };
 
     return (
-        <form className="place-form" onSubmit={placeSubmitHandler}>
+        <form className="place-form" onSubmit={BlogPostSubmitHandler}>
             <Input
                 id="title"
                 element="input"
@@ -52,14 +50,11 @@ const NewPost = () => {
                 errorText="Please enter a valid description (at least 5 characters)."
                 onInput={inputHandler}
             />
-            {/*<Input*/}
-            {/*    id="address"*/}
-            {/*    element="input"*/}
-            {/*    label="Address"*/}
-            {/*    validators={[VALIDATOR_REQUIRE()]}*/}
-            {/*    errorText="Please enter a valid address."*/}
-            {/*    onInput={inputHandler}*/}
-            {/*/>*/}
+            <input
+                type="file"
+                value={selectedFile}
+                onChange={(e) => setSelectedFile(e.target.files[0])}
+            />
             <Button type="submit" disabled={!formState.isValid}>
                 Create a New Post
             </Button>

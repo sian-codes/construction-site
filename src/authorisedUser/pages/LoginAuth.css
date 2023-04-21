@@ -1,9 +1,14 @@
+h2 {
+    color: black;
+}
+
 .authentication__header {
-    color: white;
+    color: #030303;
     text-align: center;
 }
 
 .authentication {
+    color: #000;
     width: 90%;
     max-width: 25rem;
     margin: 7rem auto;

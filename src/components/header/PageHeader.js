@@ -10,33 +10,36 @@ export default function PageHeader() {
         <div className='fade-in'>
             <nav>
                 <div className="nav-bar">
+                    <img src={logo} className="logo" alt="logo"/>
+                    <div className="icons">
                     <div className="nav-bar-home">
                         <Link
                         className="btn-contact"
+                        title="This is your tooltip"
                         style={{ textDecoration: "none" }}
                         to={"/"}
-                    >
-                        Home <FontAwesomeIcon icon={thin('home')} />
+                    >&nbsp;<FontAwesomeIcon icon={thin('home')} />
                     </Link>
                     </div>
                     <div>
                         <Link
                             className="btn-contact"
+                            title="This is your tooltip"
                             style={{ textDecoration: "none" }}
                             to={"/blog"}
                         >
-                             Blog <FontAwesomeIcon icon={thin('book')} />
+                            &nbsp; <FontAwesomeIcon icon={thin('book')} />
                         </Link>
                     </div>
-                    <img src={logo} className="logo" alt="logo"/>
                     <div>
-                        <a className="btn-contact" href="mailto:sian@siancodes.com" target="_blank">Contact Me <FontAwesomeIcon icon={thin('envelope')}/></a>
+                        <a className="btn-contact"  title="This is your tooltip" href="mailto:sian@siancodes.com" target="_blank">&nbsp;<FontAwesomeIcon icon={thin('envelope')}/></a>
                     </div>
                     <div>
-                        <a className="btn-link" href="https://github.com/sian-codes" target="_blank">GitHub <FontAwesomeIcon icon={thin("code")}/></a>
+                        <a className="btn-contact" title="This is your tooltip" href="https://github.com/sian-codes" target="_blank">&nbsp;<FontAwesomeIcon icon={thin("code")}/></a>
+                    </div>
                     </div>
                 </div>
             </nav>
-        </div> // using <a> opens a new page would it not be easier for a smoother transition like <Link>?
+        </div>
     );
 }
