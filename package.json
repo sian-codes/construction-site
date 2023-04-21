@@ -1,5 +1,5 @@
 {
-  "name": "construction-site",
+  "name": "siancodes",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -24,7 +24,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "homepage": "https://{sian-codes}.github.io/{construction-site}/{src}",
+  "homepage": "https://{sian-codes}.github.io/{siancodes}/{src}",
   "eslintConfig": {
     "extends": [
       "react-app",
