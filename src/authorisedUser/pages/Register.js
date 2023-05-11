@@ -1,64 +1,43 @@
-import React, {useContext, useState} from 'react';
-
-import Input from '../../components/form/Input';
+import React, {useState} from 'react';
 import Card from '../../components/card/Card'
-import {useForm} from "../../hooks/LoginFormHook";
-import {AuthContext} from '../components/context/auth-context';
-import './LoginAuth.css';
+import '../pages/login/login.css';
 
 const Register = () => {
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
-    function register(ev) {
+    async function register(ev) {
         ev.preventDefault();
-        fetch('http://localhost:4000/blog', {
+       const response = await fetch('http://localhost:4000/blog/register', {
             method: 'POST',
-            body: JSON.stringify({username, password})
-        })
+            body: JSON.stringify({username, password}),
+            headers: {'Content-Type':'application/json'}
+        });
+       if (response.status === 200) {
+           alert('Registration Complete')
+       }
+       else {
+           alert('Registration failed')
+       }
     }
-
-    const auth = useContext(AuthContext);
-
-    const [formState, inputHandler] = useForm(
-        {
-            email: {
-                value: '',
-                isValid: false
-            },
-            password: {
-                value: '',
-                isValid: false
-            }
-        },
-        false
-    );
-
-    const authSubmitHandler = event => {
-        event.preventDefault();
-        console.log(formState.inputs);
-        auth.login();
-    };
 
     return (
         <Card className="authentication">
-            <h2>Register Here</h2>
+            <h2>Register</h2>
             <hr />
-            <form onSubmit={authSubmitHandler}>
-                <Input
-                    element="input"
-                    id={username}
-                    label="Username"
+            <form onSubmit={register}>
+                <input type="text"
+                       placeholder="username"
+                       value={username}
+                       onChange={ev => setUsername(ev.target.value)}
                 />
-                <Input
-                    element="input"
-                    id="password"
-                    type="password"
-                    label="Password"
-                    errorText="Please enter a valid password, at least 5 characters."
-                    onInput={inputHandler}
+                <input type="password"
+                       placeholder="password"
+                       value={password}
+                       onChange={ev => setPassword(ev.target.value)}
                 />
+                <button>Register</button>
             </form>
         </Card>
     );

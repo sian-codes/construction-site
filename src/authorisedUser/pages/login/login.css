@@ -1,0 +1,40 @@
+h2 {
+    color: black;
+}
+
+.authentication__header {
+    color: #030303;
+    text-align: center;
+}
+
+.authentication {
+    color: #000;
+    width: 90%;
+    max-width: 25rem;
+    margin: 7rem auto;
+    text-align: center;
+}
+
+.authentication form {
+    margin-bottom: 1rem;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    color: black;
+}
+
+input {
+    display: block;
+    margin-bottom: 5px;
+    width: 100%;
+    padding: 5px;
+    border: 0;
+    background-color: #cccccc;
+    border-bottom: 1px solid #000000;
+}
+
+button {
+    color: black;
+}
