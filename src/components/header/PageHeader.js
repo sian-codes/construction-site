@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./pageHeader.css";
 import {thin} from "@fortawesome/fontawesome-svg-core/import.macro";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import logo from "../assets/logow.png";
+import logo from "../../assets/logow.png";
 
 export default function PageHeader() {
     return (

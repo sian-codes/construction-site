@@ -1,4 +1,4 @@
-import '../App.css';
+import '../../App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { thin } from '@fortawesome/fontawesome-svg-core/import.macro'
 

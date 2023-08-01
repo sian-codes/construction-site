@@ -1,6 +1,6 @@
 {
-  "name": "construction-site",
-  "version": "0.1.0",
+  "name": "siancodes.com",
+  "version": "1.0.0",
   "homepage": "https://sian-codes.com",
   "private": false,
   "dependencies": {
@@ -25,12 +25,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
+  "author": "Siân",
+  "license": "ISC",
   "browserslist": {
     "production": [
       ">0.2%",

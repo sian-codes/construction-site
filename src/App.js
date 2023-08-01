@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import Home from "./pages/Home";
-import Blog from "./pages/Blog";
+import Blog from "./pages/blog/Blog";
 
 import "./App.css";
-import UnderConstruction from "./pages/UnderConstruction";
-import Home from "./pages/Home";
+import UnderConstruction from "./pages/underConstruction /UnderConstruction";
+import Home from "./pages/home/Home";
 
 function App() {
     return (
