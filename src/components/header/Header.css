@@ -1,0 +1,36 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    border: thin solid #E0E0E0;
+}
+
+.logo {
+    height: 100px;
+    width: 180px;
+}
+
+.nav-bar-home {
+    margin-top: 25px;
+    margin-right: 10px;
+    color: white;
+}
+
+.btn-blog {
+    padding: 10px;
+    color: white;
+}
+
+.btn-logout {
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.btn-contact {
+    padding: 10px;
+}
+
+.btn-github {
+    padding: 10px;
+    color: white;
+}
