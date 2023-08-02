@@ -7,68 +7,8 @@ body {
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
-    text-align: center;
-    font-family: 'Dosis', sans-serif;
 }
 
-h1, h2, h3 {
-    text-align: center;
-    color: white;
-}
-
-.logo-home {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
-    width: 50%;
-}
-
-.laptop {
-    width: 25%;
-    float: left;
-    margin-left: 30px;
-}
-
-.holiday {
-    width: 35%;
-    float: right;
-    margin-left: 30px;
-}
-
-.display-pic, .hobbies {
-    width: 250px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-hr {
-    border: dotted #f7f8f8 6px;
-    border-bottom: none;
-    width: 4%;
-    margin: 100px auto;
-}
-
-.skill-row {
-    width: 50%;
-    margin: 100px auto 100px auto;
-    text-align: left;
-}
-
-.contact-me {
-    color: white;
-    margin-left: 47%;
-}
-
-.laptop {
-    width: 200px;
-    margin-left: -15px;
-    display: block;
-    margin-right: auto;
-}
-
-.footer-link {
-    color: white;
-    text-decoration: none;
+.title {
+    align-content: center; /* does nothing */
 }
