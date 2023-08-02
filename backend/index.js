@@ -19,55 +19,56 @@ app.use(cookieParser());
 
 mongoose.connect('mongodb+srv://SianCodes:rgvLN7ptnmPm3oHL@cluster0.das0otb.mongodb.net/?retryWrites=true&w=majority');
 
-<<<<<<< HEAD
-app.post('/blog/register', async (req, res) => {
-    const {username, password} = req.body;
-    try {
-        const userDoc = await User.create({
-            username,
-            password:bcrypt.hashSync(password, salt),
-        });
-        res.json(userDoc);
-    } catch (e) {
-      res.status(400).json(e);
-    }
-});
 
-app.post('/blog/login', async (req, res) => {
-=======
+// app.post('/blog/register', async (req, res) => {
+//     const {username, password} = req.body;
+//     try {
+//         const userDoc = await User.create({
+//             username,
+//             password:bcrypt.hashSync(password, salt),
+//         });
+//         res.json(userDoc);
+//     } catch (e) {
+//       res.status(400).json(e);
+//     }
+// });
+
 app.post('/blog/create-post/login', async (req, res) => {
->>>>>>> c4c0d803e2f71ca2c89e6cb1a13c36d7b73cc6ae
-    const {username, password} = req.body;
-    const userDoc = await User.findOne({username});
-    const validPassword = bcrypt.compareSync(password, userDoc.password);
 
-    if (validPassword) {
-        jwt.sign({username, id:userDoc._id}, secret, {}, (err, token) => {
-            if(err) throw err;
-            res.cookie('token', token).json('ok');
+    app.post('/blog/create-post/login', async (req, res) => {
+
+        const {username, password} = req.body;
+        const userDoc = await User.findOne({username});
+        const validPassword = bcrypt.compareSync(password, userDoc.password);
+
+        if (validPassword) {
+            jwt.sign({username, id: userDoc._id}, secret, {}, (err, token) => {
+                if (err) throw err;
+                res.cookie('token', token).json('ok');
+            });
+        } else {
+            res.status(400).json('wrong credentials');
+        }
+    });
+
+
+    app.get('/blog/create-post', (req, res) => {
+        const {token} = req.cookies;
+        jwt.verify(token, secret, {}, (err, info) => {
+            if (err) throw err;
+            res.json(info);
         });
-    } else {
-        res.status(400).json('wrong credentials');
-    }
-});
-
-<<<<<<< HEAD
-app.get('/blog/create-post', (req, res) => {
-    const {token} = req.cookies;
-    jwt.verify(token, secret, {}, (err, info) =>{
-       if (err) throw err;
-       res.json(info);
     });
-});
 
-app.post('/blog/create-post/logout', (req,res) => {
-    const {token} = req.cookies;
-    jwt.verify(token, secret, {}, (err, info) => {
-        if (err) throw err;
-        res.json(info);
+    app.post('/blog/create-post/logout', (req, res) => {
+        const {token} = req.cookies;
+        jwt.verify(token, secret, {}, (err, info) => {
+            if (err) throw err;
+            res.json(info);
+        });
     });
-});
-=======
+})
+
 // app.post('/blog/create-post/logout', (req,res) => {
 //     const {token} = req.cookies;
 //     jwt.verify(token, secret, {}, (err, info) => {
@@ -75,6 +76,5 @@ app.post('/blog/create-post/logout', (req,res) => {
 //         res.json(info);
 //     });
 // });
->>>>>>> c4c0d803e2f71ca2c89e6cb1a13c36d7b73cc6ae
 
 app.listen(4000);
