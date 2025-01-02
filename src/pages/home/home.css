@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(-45deg, #a852ee, #f85398, #23d591, #22bcef, #86E5FF, #ffffff);
+    background: #065e36;
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     min-height: 100vh;
@@ -9,6 +9,6 @@ body {
     color: white;
 }
 
-.title {
-    align-content: center; /* does nothing */
+h2 {
+    padding-left: 2rem;
 }

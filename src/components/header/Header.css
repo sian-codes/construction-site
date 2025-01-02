@@ -1,8 +1,13 @@
 .header {
+    position: fixed;
+    background-color: #065e36;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    border: thin solid #E0E0E0;
+    border-radius: 6px;
+    box-shadow: 0 1px 2px rgb(249, 255, 251);
 }
+
 
 .logo {
     height: 100px;
@@ -12,17 +17,6 @@
 .nav-bar-home {
     margin-top: 25px;
     margin-right: 10px;
-    color: white;
-}
-
-.btn-blog {
-    padding: 10px;
-    color: white;
-}
-
-.btn-logout {
-    padding: 10px;
-    text-decoration: none;
     color: white;
 }
 

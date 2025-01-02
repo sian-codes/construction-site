@@ -1,0 +1,59 @@
+main {
+    margin: auto;
+}
+
+.hobby {
+    background-color: #109363;
+    padding-top: 5rem;
+    height: 31rem;
+    width: 100%;
+}
+
+#hobbies {
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+main h2 {
+    text-align: center;
+    font-family: "Roboto Condensed", sans-serif;
+    margin: 0 0 1.5rem 0;
+    color: white;
+}
+
+#hobbies ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#hobbies li {
+    width: 10rem;
+    text-align: center;
+}
+
+#hobbies li img {
+    height: 6rem;
+    width: 6rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#hobbies li:hover {
+    transform: scale(1.6);
+    padding: 1rem;
+    border-radius: 25px;
+    background: #065e36;
+}
+
+#hobbies li h3 {
+    margin: 0.5rem 0;
+}
+
+#hobbies li p {
+    font-size: 0.9rem;
+}
