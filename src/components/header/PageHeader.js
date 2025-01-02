@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import "./pageHeader.css";
 import {thin} from "@fortawesome/fontawesome-svg-core/import.macro";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import logo from "../../assets/logow.png";
 
 export default function PageHeader() {
     return (
@@ -14,21 +13,11 @@ export default function PageHeader() {
                         <Link
                         className="btn-contact"
                         style={{ textDecoration: "none" }}
-                        to={"/"}
+                        to={"/home"}
                     >
                         Home <FontAwesomeIcon icon={thin('home')} />
                     </Link>
                     </div>
-                    <div>
-                        <Link
-                            className="btn-contact"
-                            style={{ textDecoration: "none" }}
-                            to={"/blog"}
-                        >
-                             Blog <FontAwesomeIcon icon={thin('book')} />
-                        </Link>
-                    </div>
-                    <img src={logo} className="logo" alt="logo"/>
                     <div>
                         <a className="btn-contact" href="mailto:sian@siancodes.com" target="_blank">Contact Me <FontAwesomeIcon icon={thin('envelope')}/></a>
                     </div>
@@ -37,6 +26,6 @@ export default function PageHeader() {
                     </div>
                 </div>
             </nav>
-        </div> // using <a> opens a new page would it not be easier for a smoother transition like <Link>?
+        </div>
     );
 }
